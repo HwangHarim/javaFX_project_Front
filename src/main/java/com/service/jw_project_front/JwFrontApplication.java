@@ -12,7 +12,7 @@ public class JwFrontApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(
-            JwFrontApplication.class.getResource("main-view.fxml"));
+            JwFrontApplication.class.getResource("home-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 800);
         stage.setTitle("jw-project-front");
         stage.setScene(scene);

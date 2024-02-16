@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="home"
+  prefHeight="800" prefWidth="600"
+  xmlns="http://javafx.com/javafx/17.0.2-ea"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.service.jw_project_front.controller.MainController">
+      <!-- 상단 시간 표시 영역 -->
+      <top>
+            <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                  <Label fx:id="timeLabel" prefHeight="37.0" prefWidth="264.0" alignment="CENTER" text="날짜 시간">
+                        <padding>
+                              <Insets bottom="10" left="10" right="10" top="10" />
+                        </padding>
+                  </Label>
+            </HBox>
+      </top>
+
+      <center>
+            <GridPane alignment="CENTER" hgap="10" vgap="10" VBox.vgrow="ALWAYS">
+                  <Button onMouseClicked="#moveAutoCookPage" prefHeight="180.0" prefWidth="280.0" text="자동 요리" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <Button onMouseClicked="#moveSelfCookPage" prefHeight="180.0" prefWidth="280.0" text="수동 요리" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <Button onMouseClicked="#moveLogCookPage" prefHeight="180.0" prefWidth="280.0" text="최근 요리" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <Button onMouseClicked="#moveCleanOvenPage" prefHeight="180.0" prefWidth="280.0" text="오븐 세척" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                  </rowConstraints>
+            </GridPane>
+      </center>
+
+
+      <bottom>
+            <HBox alignment="CENTER" spacing="10" VBox.vgrow="NEVER">
+                  <Button prefHeight="35.0" prefWidth="180.0" text="시내등" HBox.hgrow="ALWAYS" />
+                  <Button prefHeight="35.0" prefWidth="180.0" text="JW 장원테크" HBox.hgrow="ALWAYS" />
+                  <Button prefHeight="35.0" prefWidth="180.0" text="조작 방법" HBox.hgrow="ALWAYS"  />
+            </HBox>
+      </bottom>
+
+</BorderPane>

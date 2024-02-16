@@ -9,9 +9,6 @@ import javafx.util.Duration;
 
 public class TimeService {
 
-
-
-
     public static String getNowTime(){
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatterDAY = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH시 mm분");

@@ -1,15 +1,17 @@
 package com.service.jw_project_front.controller;
 
 import com.service.jw_project_front.service.TimeService;
+import java.util.Objects;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 
 public class MainController {
 
     @FXML
-    private Button move;
-
+    private BorderPane home;
     @FXML
     private Label timeLabel;
 
@@ -17,30 +19,33 @@ public class MainController {
         TimeService.viewTime(timeLabel);
     }
 
+
     @FXML
-    public void movePage() {
+    public void moveAutoCookPage(){
+        movePage("auto-cook-view");
+    }
+    @FXML
+    public void moveSelfCookPage(){
+        movePage("self-cook-view");
+    }
+    @FXML
+    public void moveCleanOvenPage(){
+        movePage("clean-oven-view");
+    }
+    @FXML
+    public void moveLogCookPage(){
+        movePage("log-cook-view");
+    }
+
+    public void movePage(String page) {
         try {
-//            Parent sub = FXMLLoader.load(Objects.requireNonNull(
-//                getClass().getClassLoader()
-//                    .getResource("com/service/jw_project_front/second.fxml")));
-//            // 씬에 추가
-//            Scene scene = new Scene(sub,600,800);
-//            // 씬을 스테이지에 추가
-//            //Stage stage = (Stage) btn.getScene().getWindow();
-//            Stage stage = new Stage();
-//            stage.setScene(scene);
-//            // 스테이지 설정
-//            stage.setTitle("서브페이지");
-//            stage.setResizable(false);
-//            // 스테이지 보여주기
-//            stage.show();
-//            Stage root = (Stage) move.getScene().getWindow(); //현재 윈도우를 가져온다는 뜻
-//            root.close();
+            Parent sub = FXMLLoader.load(Objects.requireNonNull(
+                getClass().getClassLoader()
+                    .getResource("com/service/jw_project_front/" + page + ".fxml")));
+            home.setCenter(sub);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
 }

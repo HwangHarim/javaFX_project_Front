@@ -6,5 +6,5 @@
 <VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
   prefHeight="800" prefWidth="600"
   fx:controller="com.service.jw_project_front.controller.SubController">
- <Text text="This is Page 1" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
+ <Text text="self-cook-page" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
 </VBox>
