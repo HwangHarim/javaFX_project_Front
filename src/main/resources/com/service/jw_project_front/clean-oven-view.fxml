@@ -4,7 +4,6 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.layout.VBox?>
 <VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-  prefHeight="800" prefWidth="600"
-  fx:controller="com.service.jw_project_front.controller.SubController">
+  prefHeight="800" prefWidth="600">
   <Text text="clean-oven-page" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
 </VBox>
