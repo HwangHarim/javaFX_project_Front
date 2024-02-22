@@ -18,8 +18,9 @@ public class TimeService {
     public static void viewTime(Label timeLabel){
         Timeline timeline = new Timeline(
             new KeyFrame(Duration.seconds(0),
-            actionEvent -> timeLabel.setText(getNowTime())),
-            new KeyFrame(Duration.seconds(1))
+                    actionEvent -> timeLabel.setText(getNowTime())),
+            new KeyFrame(Duration.seconds(1),
+                    actionEvent -> timeLabel.setText(getNowTime()))
         );
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();

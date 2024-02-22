@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<BorderPane
-  fx:id="main"
-  prefWidth="600" prefHeight="800"
-  xmlns="http://javafx.com/javafx/17.0.2-ea"
-  xmlns:fx="http://javafx.com/fxml/1"
-  fx:controller="com.service.jw_project_front.controller.MainController">
-
-  <top>
-    <Label fx:id="timeLabel" text="00:00" BorderPane.alignment="CENTER"/>
-  </top>
-
-  <center>
-    <StackPane fx:id="centerPane"/>
-  </center>
-
-  <bottom>
-    <HBox spacing="10">
-      <Button text="Prev" HBox.hgrow="ALWAYS"/>
-      <Region HBox.hgrow="ALWAYS"/>
-      <Button text="Next" HBox.hgrow="ALWAYS"/>
-    </HBox>
-  </bottom>
-
-</BorderPane>
+<?import javafx.scene.text.*?>
+<StackPane prefHeight="800" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.service.jw_project_front.controller.HomeController">
+        <BorderPane fx:id="main">
+            <top>
+                <Label fx:id="timeLabel" text="00:00" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="34.0"/>
+                    </font>
+                </Label>
+            </top>
+                <center>
+                    <StackPane fx:id="centerPane"/>
+                </center>
+            <bottom>
+                <HBox spacing="10">
+                    <Button
+                            onMouseClicked="#comeBackHome"
+                            graphicTextGap="30.0" prefHeight="70.0" prefWidth="200.0" text="HOME" textAlignment="CENTER"
+                            HBox.hgrow="ALWAYS">
+                        <HBox.margin>
+                            <Insets bottom="20.0" left="20.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font size="22.0"/>
+                        </font>
+                    </Button>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button prefHeight="70.0" prefWidth="200.0" text="Next" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                        <HBox.margin>
+                            <Insets bottom="20.0" right="20.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font size="22.0"/>
+                        </font>
+                    </Button>
+                </HBox>
+            </bottom>
+        </BorderPane>
+</StackPane>
